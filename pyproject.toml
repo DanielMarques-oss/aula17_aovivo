@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "aul17-aovivo"
+version = "0.1.0"
+description = ""
+authors = ["Danie Marques de Almeida <danielmarques.enfermagem@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+sqlalchemy = "^2.0.31"
+sqlmodel = "^0.0.21"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
