@@ -1,13 +1,12 @@
 from typing import Optional
-from sqlmodel import Field, Session, SQLModel, create_engine, select, Relationship
-import time
+from sqlmodel import Field, Session, SQLModel, create_engine, select
+
 
 # Definição da tabela Power
 class Power(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
     name: str
 
-    # Sem relacionamento bidirecional
 
 # Modificação da tabela Hero
 class Hero(SQLModel, table=True):
@@ -16,8 +15,6 @@ class Hero(SQLModel, table=True):
     secret_name: str
     age: Optional[int] = None
     special_power_id: Optional[int] = Field(default=None, foreign_key="power.id")
-
-
 
 # Configuração do banco de dados
 sqlite_file_name = "database.db"
